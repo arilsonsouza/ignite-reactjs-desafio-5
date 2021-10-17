@@ -1,1 +1,41 @@
-// TODO
+.post {
+  .bannerContainer {
+    width: 100%;
+    height: 400px;
+    margin: 0 0 1rem 0;
+  
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+    h1 {
+      font-size: 2.5rem;
+    }
+
+    .postContent {
+      margin: 3rem 0;
+
+      article {
+    
+        strong {
+          margin: 1rem 0;
+          font-size: 2.5rem;          
+        }
+    
+        p {
+          color: var(--primary-color);
+          margin-top: 1.5rem;
+          text-align: justify;
+        }
+    
+        ul {
+          color: var(--primary-color);
+          margin-top: 1.5rem;
+          text-align: justify;
+        }
+      }
+    }
+
+}

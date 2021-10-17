@@ -1,16 +1,18 @@
 import { format } from 'date-fns';
 import ptBr from 'date-fns/locale/pt-BR';
 
-import { FiCalendar, FiUser } from 'react-icons/fi';
+import { FiCalendar, FiUser, FiClock } from 'react-icons/fi';
+import commonStyles from '../../styles/common.module.scss';
 
 interface PostInfoProps {
   publicationDate: string,
-  author: string
+  author: string,
+  readTime?: string
 }
 
-export function PostInfo({ publicationDate, author }: PostInfoProps) {
+export function PostInfo({ publicationDate, author, readTime }: PostInfoProps) {
   return (
-    <>
+    <div className={commonStyles.postInfo}>
       <div>
         <FiCalendar color='#BBBBBB' />
         <time>
@@ -24,6 +26,11 @@ export function PostInfo({ publicationDate, author }: PostInfoProps) {
         <FiUser color='#BBBBBB' />
         <span>{author}</span>
       </div>
-    </>
+
+      {readTime && <div>
+        <FiClock color='#BBBBBB' />
+        <span>{readTime}</span>
+      </div>}
+    </div>
   );
 }

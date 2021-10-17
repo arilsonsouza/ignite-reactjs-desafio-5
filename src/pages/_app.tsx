@@ -6,12 +6,14 @@ import commonStyles from '../styles/common.module.scss';
 
 function MyApp({ Component, pageProps }: AppProps): JSX.Element {
   return (
-    <div className={commonStyles.container}>
-      <div className={commonStyles.content}>
-        <Header />
-        <Component {...pageProps} />
+    <>
+      <div className={commonStyles.container}>
+        <div className={commonStyles.content}>
+          <Header />
+        </div>
       </div>
-    </div>
+      <Component {...pageProps} />
+    </>
   )
 }
 
